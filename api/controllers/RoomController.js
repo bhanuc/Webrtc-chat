@@ -32,8 +32,7 @@ module.exports = {
         }
        // room.user = [];
          var roomtoadd = {
-                'sessionId': req.sessionid ,
-                'otherstuffs': 'otherstuffz'
+                'sessionId': req.session.id 
          };
         room.users[username] = roomtoadd ;
         res.json(room);

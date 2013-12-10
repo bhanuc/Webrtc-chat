@@ -15,9 +15,10 @@ var join_existing_room = function(){
 };
 var join_room = function(roomid) {
     var roomname = document.getElementById(roomid).value;
-    socket.get('/room/join?name='+roomname, function(response){
+     var username = document.getElementById("username_input").value;
+    socket.get('/room/join?name='+roomname+'&username='+username, function(response){
     console.log(response);
-        document.getElementById('join').style.display= 'none' ;
+        document.getElementById('join').style.display= 'none';
     });
 };
 
@@ -26,5 +27,6 @@ var login_user = function() {
     socket.get('/user/login?name='+username, function(response){
         console.log(response);
         document.getElementById('user_form').style.display= 'none' ; 
+        document.getElementById('user_created').textContent = "Your Username is "+username;
     });
 };

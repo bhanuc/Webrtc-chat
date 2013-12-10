@@ -14,11 +14,10 @@ module.exports = {
   	name: 'string',
     users: {
         type: 'json',
-        defaultsTo: { 'jimmy': [{
+        defaultsTo: { 'Dummy': [{
                         'sessionId': 'sessionId'
-        }, {
-                        'otherstuff': 'randomstuff'
-        }]}
+        }
+                               ]}
     }
   	
     
