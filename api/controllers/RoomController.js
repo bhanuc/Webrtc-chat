@@ -19,16 +19,20 @@ module.exports = {
     
   join: function(req, res) {
       var name = req.param('name');
+      var username = req.param('username') || 'random_guy';
      
        Room.findOne({
         name: name
     }).done(function (err,room) {
-       console.log(room);
-        if(err || !room) {
+            if(err || !room) {
             return res.json({value: 'room not found'});
         }
        // room.user = [];
-        room.users.push("jim");
+         var roomtoadd = {
+                'sessionId':req.sessionid ,
+                'otherstuffs': 'otherstuffz'
+         };
+        room.users[username] = roomtoadd ;
         res.json(room);
     });
    

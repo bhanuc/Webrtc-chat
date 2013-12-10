@@ -13,8 +13,12 @@ module.exports = {
   	
   	name: 'string',
     users: {
-        type: 'array',
-        defaultsTo: [0]
+        type: 'json',
+        defaultsTo: { 'jimmy': [{
+                        'sessionId': 'sessionId'
+        }, {
+                        'otherstuff': 'randomstuff'
+        }]}
     }
   	
     
