@@ -17,14 +17,23 @@
 
 module.exports = {
     
+  join: function(req, res) {
+      var name = req.param('name');
+     
+       Room.findOne({
+        name: name
+    }).done(function (err,room) {
+       console.log(room);
+        if(err || !room) {
+            return res.json({value: 'room not found'});
+        }
+       // room.user = [];
+        room.users.push("jim");
+        res.json(room);
+    });
+   
+  }
   
-
-
-  /**
-   * Overrides for the settings in `config/controllers.js`
-   * (specific to RoomController)
-   */
-  _config: {}
 
   
 };

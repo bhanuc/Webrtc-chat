@@ -10,9 +10,13 @@ module.exports = {
 
   attributes: {
   	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
+  	
+  	name: 'string',
+    users: {
+        type: 'array',
+        defaultsTo: [0]
+    }
+  	
     
   }
 

@@ -38,7 +38,7 @@
     // the Sails.js server.
     ///////////////////////////////////////////////////////////
     log(
-        'You are now connected' + 
+        'You are now connected to the server. ' + 
         'e.g. to send a GET request to server, try \n' + 
         '`socket.get("/", function (response) ' +
         '{ console.log(response); })`'
