@@ -1,8 +1,8 @@
 {
-    "name": "exp",
+    "name": "Web-RTC Chat",
     "private": true,
     "version": "0.0.0",
-    "description": "a Sails application",
+    "description": "A Web-RTC chat application",
     "dependencies": {
         "sails": "0.9.7",
         "grunt": "0.4.1",
@@ -15,7 +15,7 @@
         "debug": "node debug app.js"
     },
     "main": "app.js",
-    "repository": "",
-    "author": "",
-    "license": ""
+    "repository": "https://github.com/bhanuc/Webrtc-chat.git",
+    "author": "Bhanu Pratap Chaudhary",
+    "license": "MIT"
 }

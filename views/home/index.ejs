@@ -1,5 +1,9 @@
 
 <div id="connection_status"></div>
+<div id="user"><div id="user_form">
+Choose a Kickass Username<input type="text" id="username_input"><button id="username_button" onclick="login_user()">Choose</button>
+</div>
+    </div>
 <div id="form">
 
     Create a new room<input type="text" id="new_room_name" >
@@ -8,7 +12,7 @@
 </div>
 
 <div id="join"> Or else Join a room <input type="text" id="join_room">
-<button onclick="join_room()" id="join">Join a room</button>
+<button onclick="join_existing_room()" id="join">Join a room</button>
 </div>
 <div id="rooms"></div>
 <script type="application/javascript" src="/js/room.js"></script>

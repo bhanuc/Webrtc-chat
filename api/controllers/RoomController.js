@@ -20,6 +20,9 @@ module.exports = {
   join: function(req, res) {
       var name = req.param('name');
       var username = req.param('username') || 'random_guy';
+      if(!req.session.id){
+          res.json({'value': 'Get a username '});
+      }
      
        Room.findOne({
         name: name
@@ -29,15 +32,30 @@ module.exports = {
         }
        // room.user = [];
          var roomtoadd = {
-                'sessionId':req.sessionid ,
+                'sessionId': req.sessionid ,
                 'otherstuffs': 'otherstuffz'
          };
         room.users[username] = roomtoadd ;
         res.json(room);
     });
    
-  }
-  
+  },
+    
+ create: function (req, res) {
+    var name = req.param('name');
+    var description = req.param('desc');
+      //save room
+       Room.create({
+                   name: name,
+                   description: description
+                }).exec(function(err, room){
+                    if (err) return res.send('An error occured', 500);
+                    // Send back the generated project
+                    return res.json(room);
+                })
+
+       
+  },
 
   
 };

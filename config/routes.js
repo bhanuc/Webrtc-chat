@@ -38,8 +38,15 @@ module.exports.routes = {
   '/room/join': {
     controller: 'RoomController',
     action: 'join'
-  }
-
+  },
+    '/room/create': {
+        controller: 'RoomController',
+        action: 'create'
+    },
+    '/user/login': {
+        controller: 'UserController',
+        action: 'login'
+    }
   /*
   // But what if you want your home page to display
   // a signup form located at `views/user/signup.ejs`?
